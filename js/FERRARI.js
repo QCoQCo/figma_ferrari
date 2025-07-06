@@ -1,23 +1,25 @@
 const progressCircle = document.querySelector(".mpho1 .autoplay-progress svg");
 const progressCircle2 = document.querySelector(".mpho3 .autoplay-progress svg");
+const menu_list = document.querySelector('.menu_list');
+const list_bg = document.querySelector('.list_bg');
 
 $('.menu_list .d1 > li').mouseover(function(){
     let sub_h=$(this).find('.sub').height();
     $('.menu_list .sub').css('display','none');
     $(this).find('.sub').css('display','block');
-    $('.menu_list').stop().animate({
+    menu_list.stop().animate({
         height:60+sub_h
     });
-    $('.list_bg').css({
+    list_bg.css({
         height:sub_h
     }).stop().slideDown();
 }).mouseout(function(){
-    $('.menu_list').stop().animate({
+    menu_list.stop().animate({
         height:60
     },function(){
         $('.menu_list .sub').css('display','none');
     });
-    $('.list_bg').stop().slideUp();
+    list_bg.stop().slideUp();
 });
 
 
