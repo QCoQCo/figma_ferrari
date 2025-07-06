@@ -1,6 +1,7 @@
 const progressCircle = document.querySelector(".mpho1 .autoplay-progress svg");
 const progressCircle2 = document.querySelector(".mpho3 .autoplay-progress svg");
 
+// 메뉴 리스트
 $('.menu_list .d1 > li').mouseover(function(){
     let sub_h=$(this).find('.sub').height();
     $('.menu_list .sub').css('display','none');
@@ -22,9 +23,7 @@ $('.menu_list .d1 > li').mouseover(function(){
 
 
 
-
-
-
+// 스와이퍼
 let f80=new Swiper('.F80',{
     loop:true,
     effect: "fade",
